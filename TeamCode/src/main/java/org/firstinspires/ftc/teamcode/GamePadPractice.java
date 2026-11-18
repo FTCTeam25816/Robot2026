@@ -10,7 +10,6 @@ public class GamePadPractice extends OpMode {
 
     @Override
     public void init(){
-
     }
 
     @Override
