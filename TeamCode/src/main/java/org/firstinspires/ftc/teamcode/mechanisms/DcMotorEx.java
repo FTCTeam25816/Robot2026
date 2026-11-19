@@ -15,7 +15,7 @@ public class DcMotorEx {
 
     public void setMotorSpeed(double speed){
         // accepts values from -1.0 to 1.0
-        motor.setPower(speed);
+        motor.setPower(speed/2);
     }
 
     public double getMotorRevs(){
