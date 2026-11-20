@@ -20,8 +20,8 @@ public class MecanumDrive {
         frontRightMotor = hwMap.get(DcMotor.class, "driveMotor3");
         backRightMotor = hwMap.get(DcMotor.class, "driveMotor4");
 
-        frontLeftMotor.setDirection(DcMotor.Direction.REVERSE);
-        backLeftMotor.setDirection(DcMotor.Direction.REVERSE);
+        // frontLeftMotor.setDirection(DcMotor.Direction.REVERSE);
+        // backLeftMotor.setDirection(DcMotor.Direction.REVERSE);
 
         frontLeftMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         backLeftMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -32,7 +32,7 @@ public class MecanumDrive {
 
         RevHubOrientationOnRobot RevOrientation = new RevHubOrientationOnRobot(
                 RevHubOrientationOnRobot.LogoFacingDirection.UP,
-                RevHubOrientationOnRobot.UsbFacingDirection.valueOf(fortyFiveDegrees)
+                RevHubOrientationOnRobot.UsbFacingDirection.RIGHT
         ); // MUST CHANGE USB ORIENTATION
 
         imu.initialize(new IMU.Parameters(RevOrientation));
@@ -54,7 +54,7 @@ public class MecanumDrive {
         incorrect
         */
 
-        double maxSpeed = 1.0;
+        double maxSpeed = 0.3;
         /* Good for outreach events; you can change max speed to something lower
         like 0.3 so kids don't drive so fast
          */
