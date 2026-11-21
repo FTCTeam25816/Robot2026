@@ -1,8 +1,8 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode.Examples.Examples.teleops;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
-import org.firstinspires.ftc.teamcode.mechanisms.Combined;
+import org.firstinspires.ftc.teamcode.Examples.Examples.mechanisms.Combined;
 
 public class DcMotorPractice extends OpMode {
     Combined bench = new Combined();
