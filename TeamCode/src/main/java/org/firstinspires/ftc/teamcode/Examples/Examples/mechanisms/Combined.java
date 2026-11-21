@@ -1,4 +1,4 @@
-package org.firstinspires.ftc.teamcode.mechanisms;
+package org.firstinspires.ftc.teamcode.Examples.Examples.mechanisms;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
@@ -51,4 +51,31 @@ public class Combined {
         motor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.FLOAT);
     }
 
+    public static class DcMotorEx {
+        private DcMotor motor; //
+        private double ticksPerRev;
+
+        public void init(HardwareMap hwMap){
+
+            motor = hwMap.get(DcMotor.class, "motor");
+            motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            ticksPerRev = motor.getMotorType().getTicksPerRev();
+        }
+
+        public void setMotorSpeed(double speed){
+            // accepts values from -1.0 to 1.0
+            motor.setPower(speed/2);
+        }
+
+        public double getMotorRevs(){
+            return motor.getCurrentPosition() / ticksPerRev; // normalizes ticks to revolutions
+        }
+
+        // motor.getCurrentPosition() gets the current tick count relative to the encoder zero.
+        // It accumulates over time
+
+        // If we had a 2:1 gear ratio, we'd multiply that line of code by 2.
+        // It means that the motor turns twice for every one turn of the mechanism
+
+    }
 }

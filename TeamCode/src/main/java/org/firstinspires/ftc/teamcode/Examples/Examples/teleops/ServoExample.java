@@ -1,9 +1,9 @@
-package org.firstinspires.ftc.teamcode;
+package org.firstinspires.ftc.teamcode.Examples.Examples.teleops;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.mechanisms.ServoEx;
+import org.firstinspires.ftc.teamcode.Examples.Examples.mechanisms.ServoEx;
 
 @TeleOp
 public class ServoExample extends OpMode {
